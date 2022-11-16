@@ -1,10 +1,15 @@
-<div><%= flash[:success] %></div>
-<p>Title</p>
-<p><%= @book.title %></p>
+<div class="success-text"><%= flash[:success] %></div>
 
-<p>Body</p>
-<p><%= @book.body %></p>
+<div class="title-box">
+    <p class="bold-text">Title:</p>
+    <p><%= @book.title %></p>
+</div>
+
+<div class="body-box">
+    <p class="bold-text">Body:</p>
+    <p><%= @book.body %></p>
+</div>
 
 <span><%= link_to "Edit", edit_book_path(@book.id) %></span>
-<p>|</p>
+<span>|</span>
 <span><%= link_to "Back", '/books' %></span>
